@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 194, 194);
+}
+
+.chart {
+  width: 800px;
+  min-height: 400px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: 40px repeat(9, min-content);
+  row-gap: 7px;
+}
+
+/* POSITION THE DAY OF THE WEEK */
+.chart__item--day {
+  font-weight: 700;
+  font-size: 16px;
+  grid-row: 1;
+  text-align: center;
+}
+
+.chart__item--sun {
+  grid-column: 1 / span 2;
+}
+.chart__item--mon {
+  grid-column: 3 / span 2;
+}
+.chart__item--tue {
+  grid-column: 5 / span 2;
+}
+.chart__item--web {
+  grid-column: 7 / span 2;
+}
+
+.chart__item--thu {
+  grid-column: 9 / span 2;
+}
+.chart__item--fri {
+  grid-column: 11 / span 2;
+}
+.chart__item--sat {
+  grid-column: 13 / span 2;
+}
+
+/* TASK FORMATION ========= */
+.chart__item--task {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: #fff;
+  background-color: orangered;
+  grid-column: span 4;
+  text-align: left;
+  align-self: start;
+  /* max-width: 200px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.chart__item--task:hover {
+  opacity: 0.8;
+}
+
+.chart__item--1 {
+  grid-column: 1 / span 4;
+  background-color: rgb(133, 55, 133);
+  grid-row: 2;
+}
+
+.chart__item--2 {
+  grid-column: 3 / -1;
+  background-color: rgb(60, 60, 219);
+  grid-row: 3;
+}
+
+.chart__item--3 {
+  grid-column: 1 / 6;
+  background-color: rgb(68, 214, 202);
+  grid-row: 4;
+}
+
+.chart__item--4 {
+  grid-column: 5 / span 5;
+  background-color: rgb(76, 11, 180);
+  grid-row: 5;
+}
+
+.chart__item--5 {
+  grid-column: 3 / span 3;
+  background-color: rgb(109, 29, 60);
+  grid-row: 6;
+}
+.chart__item--6 {
+  grid-column: 4 / span 6;
+  background-color: rgb(233, 72, 72);
+  grid-row: 7;
+}
+
+.chart__item--7 {
+  grid-column: 8 / 9;
+  background-color: orangered;
+  grid-row: 8;
+}
+
+.chart__item--8 {
+  grid-column: 6 / span 5;
+  background-color: rgb(52, 109, 29);
+  grid-row: 9;
+}
+
+.chart__item--9 {
+  grid-column: -5 / -1;
+  background-color: rgb(68, 214, 202);
+  grid-row: 10;
+}
+
+/* DRAWING VERTICAL LINES ============================== */
+.chart__vline {
+  border-right: 1px solid rgb(224, 224, 224);
+  grid-row: 1 / -1;
+}
+.chart__vline:nth-of-type(1) {
+  grid-column: 1 / span 2;
+}
+.chart__vline:nth-of-type(2) {
+  grid-column: 3 / span 2;
+}
+
+.chart__vline:nth-of-type(3) {
+  grid-column: 5 / span 2;
+}
+
+.chart__vline:nth-of-type(4) {
+  grid-column: 7 / span 2;
+}
+
+.chart__vline:nth-of-type(5) {
+  grid-column: 9 / span 2;
+}
+
+.chart__vline:nth-of-type(6) {
+  grid-column: 11 / span 2;
+}
